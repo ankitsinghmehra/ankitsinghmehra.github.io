@@ -1,0 +1,120 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="lib/css/trystyle.css" type="text/css" rel="stylesheet">
+        <!--<link href="lib/css/materialize.min.css" type="text/css" rel="stylesheet">-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:100" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="hamburger">
+                <button class="button hamburger__button js-menu__toggle">
+                  <span class="hamburger__label">Open menu</span>
+                </button>
+            </div>
+            <nav class="menu">
+                <ul class="list menu__list">
+                    <li class="menu__group">
+                        <a href="try" class="link menu__link">Home</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="about.html" class="link menu__link">About me</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="services.html" class="link menu__link">Services</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="#" class="link menu__link">Portfolio</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="contact.html" class="link menu__link">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+       
+        <div id="firstdiv">
+            <div id="moveObject">
+                <div id="object1">
+                    <img src="lib/img/mars-153566_640.png" height="200px" width="200px"/>
+                </div>
+                <div id="object2">
+                    <img src="lib/img/mars-153566_640.png" height="400px" width="400px"/>
+                </div>
+                
+                <div id="object3">
+                    <img src="lib/img/mars-153566_640.png" height="300px" width="300px"/>
+                </div>
+                
+                <div id="layer">
+                    <h1 id="heading1">Here it is, My portfolio.</h1>
+                    <h2 id="heading2">Ok Let's begin!</h2>
+                    <div id="button_wrapper">
+                        <a href="#secdiv" style="text-decoration:none;font-size:16px;color:black;" onclick="hide()"><b>Tap On Me..</b></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="secdiv">
+            <h1>Android Development</h1>
+        </div>
+        <div id="thirddiv">
+            <h1>Web Development</h1>
+        </div>
+        <div id="fordiv">
+            <h1>Augmented Reality</h1>
+        </div>
+        <div id="fifthdiv">
+            <h1>Internet of Things(I.O.T.)</h1>
+            <div id="topicon">
+                <a href="#firstdiv"><img src="lib/img/scroll_up_direction_up_arrow_top_angular-512.png" height="50px" width="50px"/></a>
+            </div>
+        </div>
+        
+         <script src="lib/js/jquery-3.3.1.min.js"></script>
+        <!-- <script src="lib/js/materialize.min.js"></script>-->
+        <script src="lib/js/particles.min.js"></script>
+        <script src="lib/js/app.js"></script>
+        <script src="lib/js/tryjs.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
+        <script>
+        var object1=$('#object1');
+        var object2=$('#object2');
+        var object3=$('#object3');
+        
+        var layer=$('#layer');
+        
+        layer.mousemove(function(e){
+           var valueX=(e.pageX * -1 / 12); 
+           var valueY=(e.pageY * -1 / 12); 
+            
+            object1.css({
+                'transform':'translate3d('+valueX+'px,'+valueY+'px,0) rotate(20deg)'
+            });
+        });
+        
+        layer.mousemove(function(e){
+           var valueX=(e.pageX * -1 / 15); 
+           var valueY=(e.pageY * -1 / 20); 
+            
+            object2.css({
+                'transform':'translate3d('+valueX+'px,'+valueY+'px,0)'
+            });
+        });
+        
+        layer.mousemove(function(e){
+           var valueX=(e.pageX * -1 / 15); 
+           var valueY=(e.pageY * -1 / 15); 
+            
+            object3.css({
+                'transform':'translate3d('+valueX+'px,'+valueY+'px,0) rotate(-20deg)'
+            });
+        });
+        </script>
+    </body>
+</html>
